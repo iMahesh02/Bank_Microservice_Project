@@ -3,10 +3,14 @@ package com.gyuanaBank.accounts.dto;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
-@Data @AllArgsConstructor
+@Data
 public class ResponseDto {
 
     private String statusCode;
 
     private String statusMsg;
+
+    public ResponseDto(String statusCode, String statusMsg) {
+
+    }
 }
