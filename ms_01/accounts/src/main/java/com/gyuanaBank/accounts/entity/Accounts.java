@@ -17,4 +17,35 @@ public class Accounts extends  BaseEntity {
 
     private String branchAddress;
 
+    public Long getAccountNumber() {
+        return accountNumber;
+    }
+
+    public void setAccountNumber(Long accountNumber) {
+        this.accountNumber = accountNumber;
+    }
+
+    public void setAccountType (String accountType) {
+        this.accountType = accountType;
+    }
+
+    public String getAccountType() {
+        return accountType;
+    }
+
+    public void setBranchAddress(String branchAddress) {
+        this.branchAddress = branchAddress;
+    }
+
+    public String getBranchAddress() {
+        return branchAddress;
+    }
+
+    public void setCustomerId(Long customerId) {
+        this.customerId = customerId;
+    }
+
+    public Long getCustomerId() {
+        return customerId;
+    }
 }
