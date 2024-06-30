@@ -1,10 +1,13 @@
 package com.gyuanaBank.accounts.service.impl;
 
 import com.gyuanaBank.accounts.constants.AccountsConstants;
+import com.gyuanaBank.accounts.dto.AccountsDto;
 import com.gyuanaBank.accounts.dto.CustomerDto;
 import com.gyuanaBank.accounts.entity.Accounts;
 import com.gyuanaBank.accounts.entity.Customer;
 import com.gyuanaBank.accounts.exception.CustomerAlreadyExistsException;
+import com.gyuanaBank.accounts.exception.ResourceNotFoundException;
+import com.gyuanaBank.accounts.mapper.AccountsMapper;
 import com.gyuanaBank.accounts.mapper.CustomerMapper;
 import com.gyuanaBank.accounts.repository.AccountsRepository;
 import com.gyuanaBank.accounts.repository.CustomerRepository;
@@ -43,6 +46,8 @@ public class AccountsServiceImpl implements IAccountsService {
         accountsRepository.save(createNewAccount(savedCustomer));
     }
 
+
+
     private Accounts createNewAccount(Customer customer)  {
         Accounts newAccount = new Accounts();
         newAccount.setCustomerId(customer.getCustomerId());
@@ -54,5 +59,24 @@ public class AccountsServiceImpl implements IAccountsService {
         newAccount.setCreatedAt(LocalDateTime.now());
         newAccount.setCreatedBy("Admin");
         return newAccount;
+    }
+
+    @Override
+    public CustomerDto fetchAccount(String mobileNumber) {
+
+        /* need to check if the details exists or not for customer and its corresponding account */
+        Customer customer = customerRepository.findByMobileNumber(mobileNumber).orElseThrow(
+                () -> new ResourceNotFoundException("Customer", "mobileNumber", mobileNumber)
+        );
+
+        Accounts accounts = accountsRepository.findByCustomerId(customer.getCustomerId()).orElseThrow(
+                () -> new ResourceNotFoundException("Account", "customerId", customer.getCustomerId().toString())
+        );
+
+        CustomerDto customerDto = CustomerMapper.mapToCustomerDto(customer, new CustomerDto());
+
+        customerDto.setAccountsDto(AccountsMapper.mapToAccountsDto(accounts, new AccountsDto()));
+
+        return customerDto;
     }
 }
