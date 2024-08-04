@@ -33,6 +33,13 @@ public class ErrorResponseDto {
     )
     private LocalDateTime  errorTime;
 
+    public ErrorResponseDto(String apiPath, HttpStatus errorCode, String errorMessage, LocalDateTime errorTime) {
+        this.apiPath = apiPath;
+        this.errorCode = errorCode;
+        this.errorMessage = errorMessage;
+        this.errorTime = errorTime;
+    }
+
     public String getApiPath() {
         return apiPath;
     }
