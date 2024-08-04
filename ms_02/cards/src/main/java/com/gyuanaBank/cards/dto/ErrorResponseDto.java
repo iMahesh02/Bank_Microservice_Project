@@ -29,9 +29,16 @@ public class ErrorResponseDto {
     private String errorMessage;
 
     @Schema(
-            description = "Time at which the error happende"
+            description = "Time at which the error happened"
     )
     private LocalDateTime  errorTime;
+
+    public ErrorResponseDto(String apiPath, HttpStatus errorCode, String errorMessage, LocalDateTime errorTime) {
+        this.apiPath = apiPath;
+        this.errorCode = errorCode;
+        this.errorMessage = errorMessage;
+        this.errorTime = errorTime;
+    }
 
     public String getApiPath() {
         return apiPath;
