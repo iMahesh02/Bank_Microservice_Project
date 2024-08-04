@@ -29,7 +29,7 @@ public class ErrorResponseDto {
     private String errorMessage;
 
     @Schema(
-            description = "Time at which the error happende"
+            description = "Time at which the error happened"
     )
     private LocalDateTime  errorTime;
 
