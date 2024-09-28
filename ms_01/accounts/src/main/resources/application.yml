@@ -14,3 +14,22 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+  config:
+    import:
+      - "application_qa.yml"
+      - "application_prod.yml"
+  profiles:
+    active:
+      - "qa"
+
+build:
+  version: "3.0"
+
+# Creating a common prefix for my Accounts MS
+accounts:
+  message: "Welcome to Bank_of_Guyana Accounts related Local APIs"
+  contactDetails:
+    name: "John Doe - Developer"
+    mail: "johndoe@bnkguy.com"
+  onCallSupport:
+    - (91) 123 456 7890

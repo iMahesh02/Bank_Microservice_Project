@@ -14,3 +14,22 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+  config:
+    import:
+      - "application_qa.yml"
+      - "application_prod.yml"
+  profiles:
+    active:
+      - "qa"
+
+build:
+  version: "3.0"
+
+# Creating a common prefix for my Loans MS
+loans:
+  message: "Welcome to Bank_of_Guyana Loans related Local APIs"
+  contactDetails:
+    name: "Dena Stone - Developer"
+    mail: "stonedena@bnkguy.com"
+  onCallSupport:
+    - (91) 155 456 7890
