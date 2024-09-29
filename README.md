@@ -1,5 +1,3 @@
 # Bank_Microservice_Project
 
-Project for Bank of Guyana
-
-Contains APIs for Microservice 01
+This branch includes Spring Cloud implementation of Configurations
