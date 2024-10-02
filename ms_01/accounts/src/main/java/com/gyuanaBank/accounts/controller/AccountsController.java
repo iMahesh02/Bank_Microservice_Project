@@ -38,8 +38,8 @@ public class AccountsController {
         this.iAccountsService = iAccountsService;
     }
 
-    @Value("${build.version}")
-    private String buildVersion;
+//    @Value("${build.version}")
+//    private String buildVersion;
 
     @Autowired
     private Environment environment;
@@ -156,31 +156,31 @@ public class AccountsController {
         }
     }
 
-    @Operation(
-            summary = "Get Build Information",
-            description = "REST API to fetch build information that is deployed into Accounts MS"
-    )
-    @ApiResponses({
-            @ApiResponse(
-                    responseCode = "200",
-                    description = "HTTP Status OK"
-            ),
-            @ApiResponse(
-                    responseCode = "500",
-                    description = "HTTP Status Internal Server Error",
-                    content = @Content(
-                            schema = @Schema(
-                                    implementation = ErrorResponseDto.class
-                            )
-                    )
-            )
-    })
-    @GetMapping("/build-info")
-    public ResponseEntity<String> getBuildInfo() {
-        return ResponseEntity
-                .status(HttpStatus.OK)
-                .body(buildVersion);
-    }
+//    @Operation(
+//            summary = "Get Build Information",
+//            description = "REST API to fetch build information that is deployed into Accounts MS"
+//    )
+//    @ApiResponses({
+//            @ApiResponse(
+//                    responseCode = "200",
+//                    description = "HTTP Status OK"
+//            ),
+//            @ApiResponse(
+//                    responseCode = "500",
+//                    description = "HTTP Status Internal Server Error",
+//                    content = @Content(
+//                            schema = @Schema(
+//                                    implementation = ErrorResponseDto.class
+//                            )
+//                    )
+//            )
+//    })
+//    @GetMapping("/build-info")
+//    public ResponseEntity<String> getBuildInfo() {
+//        return ResponseEntity
+//                .status(HttpStatus.OK)
+//                .body(buildVersion);
+//    }
 
     @Operation(
             summary = "Get Java Version Information",

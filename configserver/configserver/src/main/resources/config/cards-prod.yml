@@ -1,9 +1,3 @@
-# property which must be activated
-spring:
-  config:
-    activate:
-      on-profile: "prod"
-
 build:
   version: "1.0"
 
