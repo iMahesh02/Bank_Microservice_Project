@@ -1,0 +1,11 @@
+build:
+  version: "1.0"
+
+# Creating a common prefix for my Accounts MS
+accounts:
+  message: "Welcome to Bank_of_Guyana Accounts related to PROD APIs"
+  contactDetails:
+    name: "Sean Jones - Developer"
+    mail: "seanjones@bnkguy.com"
+  onCallSupport:
+    - (91) 454 456 7890

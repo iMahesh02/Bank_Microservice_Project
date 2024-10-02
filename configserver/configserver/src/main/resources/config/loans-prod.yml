@@ -1,0 +1,11 @@
+build:
+  version: "2.0"
+
+# Creating a common prefix for my Loans MS
+loans:
+  message: "Welcome to Bank_of_Guyana Loans related to PROD APIs"
+  contactDetails:
+    name: "Hana Tanaka - Developer"
+    mail: "tanakahana@bnkguy.com"
+  onCallSupport:
+    - (91) 474 456 7890

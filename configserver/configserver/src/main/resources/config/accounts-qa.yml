@@ -1,0 +1,11 @@
+build:
+  version: "2.0"
+
+# Creating a common prefix for my Accounts MS
+accounts:
+  message: "Welcome to Bank_of_Guyana Accounts related to QA APIs"
+  contactDetails:
+    name: "Bob Alice - Developer"
+    mail: "bobalice@bnkguy.com"
+  onCallSupport:
+    - (91) 223 456 7890

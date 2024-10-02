@@ -1,0 +1,11 @@
+build:
+  version: "3.0"
+
+# Creating a common prefix for my Cards MS
+cards:
+  message: "Welcome to Bank_of_Guyana Cards related Local APIs"
+  contactDetails:
+    name: "Elena Muz - Developer"
+    mail: "elenamuz@bnkguy.com"
+  onCallSupport:
+    - (91) 145 456 7890

@@ -1,0 +1,11 @@
+build:
+  version: "1.0"
+
+# Creating a common prefix for my Cards MS
+cards:
+  message: "Welcome to Bank_of_Guyana Cards related to PROD APIs"
+  contactDetails:
+    name: "Ana Pedro - Developer"
+    mail: "pedroana@bnkguy.com"
+  onCallSupport:
+    - (91) 473 456 7890
