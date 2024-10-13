@@ -10,3 +10,7 @@ Here we have concluded the integration of Configuration for our app with Spring 
   5. After this on terminal (console) it will give you a source url
   6. Copy this url and paste it in the webhook settings under github
   7. Keep all the settings of webhook as is
+
+This release branch consists of Spring Cloud Bus, Spring Cloud Monitor and Rabbit MQ, we will be removing this in upcoming release.
+
+Refer this branch to see how we can use the above mentioned tools.
